@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints"
 
 export const Container = styled.button`
   background-color: ${({ theme }) => theme.COLORS.BLUE_300};
@@ -20,6 +21,18 @@ export const Container = styled.button`
   }
 
   > svg {
-    font-size: 1.37;
+    font-size: 1.37rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.XS}) {
+    height: 3rem;
+
+    > span {
+    font-size: .8rem;
+    }
+
+    > svg {
+      font-size: 1rem;
+    }
   }
 `;
